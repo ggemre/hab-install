@@ -21,11 +21,13 @@ for app in apps:
   app_name = app.lower().replace(" ", "-")
   
   if app_name == "invidious":
-    os.system("./invidious-install.sh " + app_data_dir + "/DUMMYDIR/" + " >/dev/null 2>&1")
+    os.system("./invidious-install.sh " + app_data_dir + " >/dev/null 2>&1")
   else:
-    os.system("curl -fsS --create-dirs https://raw.githubusercontent.com/ggemre/hab-install/main/data/" + app_name + "/docker-compose.yml -o " + app_data_dir + "/DUMMYDIR/" + app_name + "/docker-compose.yml")
+    os.system("curl -fsS --create-dirs https://raw.githubusercontent.com/ggemre/hab-install/main/data/" + app_name + "/docker-compose.yml -o " + app_data_dir + app_name + "/docker-compose.yml")
 
   progress += 100 / len(apps)
   bar.update(progress)
 
-  print("Server successfully installed.")
+print("")
+os.system("./update-environment.py")
+print("Server successfully installed.")
