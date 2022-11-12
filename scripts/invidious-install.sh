@@ -1,6 +1,7 @@
 #!/bin/sh
 
-mkdir $1
 cd $1
 git clone https://github.com/iv-org/invidious.git
-curl https://
+cd invidious
+curl -fs https://raw.githubusercontent.com/ggemre/hab-install/main/data/invidious/docker-compose.yml -o docker-compose.yml
+rm -rf .git screenshots README.md TRANSLATION .gitignore .gitattributes .editorconfig mocks CHANGELOG.md
