@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    volumes:
+      - ${HAB_DIR}/data/prowlarr/config:/config
+      - ${HAB_DIR}/media:/downloads
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 9696:9696
+    restart: unless-stopped

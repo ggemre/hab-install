@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  flame:
+    image: ghcr.io/fdarveau/flame:latest
+    container_name: flame
+    volumes: 
+      - ${HAB_DIR}/data/flame/data:/app/data
+    environment:
+      - PASSWORD=${PASS}
+    ports:
+      - 5005:5005
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    volumes:
+      - ${HAB_DIR}/data/radarr/config:/config
+      - ${HAB_DIR}/media:/downloads
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 7878:7878
+    restart: unless-stopped

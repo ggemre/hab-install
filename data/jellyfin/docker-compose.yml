@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    volumes:
+      - ${HAB_DIR}/data/jellyfin/config:/config
+      - ${HAB_DIR}/media/movies:/data/movies
+      - ${HAB_DIR}/media/shows:/data/tvshows
+    ports:
+      - 8096:8096
+    restart: unless-stopped
