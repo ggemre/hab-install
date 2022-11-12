@@ -30,4 +30,4 @@ for app in apps:
 
 print("")
 os.system("./update-environment.py")
-print("Server successfully installed.")
+os.system("./start.py")
