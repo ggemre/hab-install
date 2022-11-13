@@ -3,7 +3,7 @@
 Installation and management scripts for multiple docker containers.
 
 | Service | Port | Description |
-| - | - | - | - |
+| --- | --- | --- |
 | Flame | 5005 | Dashboard for apps and bookmarks |
 | Jellyfin | 8096 | Media server |
 | Jellyseerr | 5055 | Request and recommendation client for Jellyfin |
