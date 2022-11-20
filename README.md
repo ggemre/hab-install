@@ -21,21 +21,21 @@ Installation and management scripts for multiple docker containers.
 
 Found in the `scripts` directory are several files written to make server maintenance and administration easier. Every script comes with a help option that explains the purpose, usage, and available flags. For help simply use the `-h` or `--help` flag.
 
-`./install.py`
+- `./install.py`
 
 Installs all services that the user selected from a list.
 
-`./start.py`
+- `./start.py`
 
 Starts each docker container.
 
-`./stop.py`
+- `./stop.py`
 
 Stops each docker container. Optional flags:
 
 `./stop.py -s` or `./stop.py --shutdown` also shuts down the server after stopping the containers.
 
-`./update-environment.py`
+- `./update-environment.py`
 
 Updates the .env files for the docker containers. Optional flags:
 
