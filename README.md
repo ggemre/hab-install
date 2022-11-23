@@ -25,9 +25,13 @@ Found in the `scripts` directory are several files written to make server mainte
 
 Installs all services that the user selected from a list.
 
+![start](images/start.gif)
+
 - `./start.py`
 
 Starts each docker container.
+
+![stop](images/stop.gif)
 
 - `./stop.py`
 
