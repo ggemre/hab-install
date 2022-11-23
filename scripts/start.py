@@ -14,3 +14,6 @@ for app in apps:
   os.system("cd " + app_data_dir + app + "; sudo docker-compose --log-level CRITICAL up -d >/dev/null 2>&1")
   progress += (100 / len(apps))
   bar.update(progress)
+
+bar.finish()
+print("\nhab is now up and running")

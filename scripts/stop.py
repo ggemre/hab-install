@@ -25,5 +25,10 @@ for app in apps:
   progress += (100 / len(apps))
   bar.update(progress)
 
+bar.finish()
+
 if args.shutdown:
   os.system("sudo shutdown")
+
+print("\nhab is now down")
+
