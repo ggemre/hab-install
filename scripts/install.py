@@ -28,6 +28,8 @@ for app in apps:
   progress += 100 / len(apps)
   bar.update(progress)
 
+bar.finish()
+
 print("")
 os.system("./update-environment.py")
 os.system("./start.py")
